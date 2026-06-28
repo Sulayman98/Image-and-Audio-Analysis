@@ -36,3 +36,102 @@ layout(t(1:3))
 plot(Flower1,       main = "Original")
 plot(Flower1.xedge, main = "X-Edge")
 plot(Flower1.yedge, main = "Y-Edge")
+
+#Task 1: Edge Detection
+#Using flower 1:
+#Results: The algorithm successfully found where the red petals end and the black background begins, and also traced all the vein lines within the petals
+#hich are also edges because they represent intensity changes.
+#Using sigma =2, referring to noise reduction before edge detection
+#order = 2, basically second order differentiation to find how fast the change in the image change is happening
+flower1.xedge = deriche(flower1, 2, order=2, axis="x") 
+flower1.yedge = deriche(flower1, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(flower1,       main = "Original")
+plot(flower1.xedge, main = "X-Edge")
+plot(flower1.yedge, main = "Y-Edge")
+
+#Edge Detection using flower 2
+
+flower2.xedge = deriche(flower2, 2, order=2, axis="x")
+flower2.yedge = deriche(flower2, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(flower2,        main = "Original")
+plot(flower2.xedge,  main = "X-Edge")
+plot(flower2.yedge,  main = "Y-Edge")
+
+#Edge Detection using Scenery 1
+scenery1.xedge = deriche(scenery1, 2, order=2, axis="x")
+scenery1.yedge = deriche(scenery1, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(scenery1,        main = "Original")
+plot(scenery1.xedge,  main = "X-Edge")
+plot(scenery1.yedge, main = "Y-Edge")
+
+#Edge Detection using Scenery2
+
+scenery2.xedge = deriche(scenery2, 2, order=2, axis ="x")
+scenery2.yedge = deriche(scenery2, 2, order=2, axis = "y")
+
+layout(t(1:3))
+plot(scenery2,       main = "Original")
+plot(scenery2.xedge, main = "X-Edge")
+plot(scenery2.yedge, main = "Y-Edge")
+
+#Edge Detection using Building1
+
+building1.xedge = deriche(building1, 2 , order=2, axis="x")
+building1.yedge = deriche(building1, 2 , order=2, axis="y")
+
+layout(t(1:3))
+plot(building1,       main = "Original")
+plot(building1.xedge, main = "X-Edge")
+plot(building1.yedge, main = "Y-Edge")
+
+#Edge Detection using Building2
+
+building2.xedge = deriche(building2, 2, order=2, axis="x")
+building2.yedge = deriche(building2, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(building2,       main = "Original")
+plot(building2.xedge, main = "X-Edge")
+plot(building2.yedge, main = "Y-Edge")
+
+#Edge Detection using Person1
+person1.xedge = deriche(person1, 2, order=2, axis="x")
+person1.yedge = deriche(person1, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(person1, main = "Original")
+plot(person1.xedge, main = "X-Edge")
+plot(person1.yedge, main = "Y-Edge")
+
+#Edge Detection using Person2
+person2.xedge = deriche(person2, 2, order=2, axis="x")
+person2.yedge = deriche(person2, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(person2, main = "Original")
+plot(person2.xedge, main = "X-Edge")
+plot(person2.yedge, main = "Y-Edge")
+
+#Edge Detection using otherimage1
+otherimage1.xedge = deriche(otherimage1, 2, order=2, axis="x")
+otherimage1.yedge = deriche(otherimage1, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(otherimage1, main = "Original")
+plot(otherimage1.xedge, main = "X-Edge")
+plot(otherimage1.yedge, main = "Y-Edge")
+
+#Edge Detection using otherimage2
+otherimage2.xedge = deriche(otherimage2, 2, order=2, axis="x")
+otherimage2.yedge = deriche(otherimage2, 2, order=2, axis="y")
+
+layout(t(1:3))
+plot(otherimage2, main = "Original")
+plot(otherimage2.xedge, main = "X-Edge")
+plot(otherimage2.yedge, main = "Y-Edge")
