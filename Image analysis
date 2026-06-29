@@ -461,3 +461,77 @@ plot(otherimage2_rotated, main = "otherimage2 rotated")
 # Shifting otherimage2
 otherimage2_shifted = imshift(otherimage2, 40, 20)          # shift 40px right, 20px down
 plot(otherimage2_shifted, main="otherimage2 shifted")
+
+#Task 4: Rectangular, circular and fuzzy selection
+##Rectangular, circular and fuzzy selection
+
+#flower1
+imshift(flower1,100,100,boundary=2) %>% plot(main="flower1 (circular)") #Shift circular
+flower1.rect <- imsub(flower1, x %inr% c(100,300), y %inr% c(100,300))
+plot(flower1.rect, main="flower1 rectangular")
+flower1.fuzzy <- px.flood(flower1, x=1, y=1, sigma=0.3)
+plot(flower1.fuzzy, main="flower1 fuzzy")
+
+#flower2
+imshift(flower2,100,100,boundary=2) %>% plot(main="flower2 (circular)") #Shift circular
+flower2.rect <- imsub(flower2, x %inr% c(100,300), y %inr% c(100,300))
+plot(flower2.rect, main="flower2 rectangular")
+flower2.fuzzy <- px.flood(flower2, x=1, y=1, sigma=0.3)
+plot(flower2.fuzzy, main="flower2 fuzzy")
+
+#scenery1
+imshift(scenery1,100,100,boundary=2) %>% plot(main="scenery1 (circular)") #Shift circular
+scenery1.rect <- imsub(scenery1, x %inr% c(100,300), y %inr% c(100,300))
+plot(scenery1.rect, main="scenery1 rectangular")
+scenery1.fuzzy <- px.flood(scenery1, x=1, y=1, sigma=0.3)
+plot(scenery1.fuzzy, main="scenery1 fuzzy")
+
+#scenery2
+imshift(scenery2,100,100,boundary=2) %>% plot(main="scenery2 (circular)") #Shift circular
+scenery2.rect <- imsub(scenery2, x %inr% c(100,300), y %inr% c(100,300))
+plot(scenery2.rect, main="scenery2 rectangular")
+scenery2.fuzzy <- px.flood(scenery2, x=1, y=1, sigma=0.3)
+plot(scenery2.fuzzy, main="scenery2 fuzzy")
+
+#building1
+imshift(building1,100,100,boundary=2) %>% plot(main="building1 (circular)") #Shift circular
+building1.rect <- imsub(building1, x %inr% c(100,300), y %inr% c(100,300))
+plot(scenery2.rect, main="building1 rectangular")
+building1.fuzzy <- px.flood(building1, x=1, y=1, sigma=0.3)
+plot(building1.fuzzy, main="building1 fuzzy")
+
+#building2
+imshift(building2,100,100,boundary=2) %>% plot(main="building2 (circular)") #Shift circular
+building2.rect <- imsub(building2, x %inr% c(100,300), y %inr% c(100,300))
+plot(building2.rect, main="building2 rectangular")
+building2.fuzzy <- px.flood(building2, x=1, y=1, sigma=0.3)
+plot(building2.fuzzy, main="building2 fuzzy")
+
+#person1
+imshift(person1,100,100,boundary=2) %>% plot(main="person1 (circular)") #Shift circular
+person1.rect <- imsub(person1, x %inr% c(100,300), y %inr% c(100,300))
+plot(person1.rect, main="person1 rectangular")
+person1.fuzzy <- px.flood(person1, x=1, y=1, sigma=0.3)
+plot(person1.fuzzy, main="person1 fuzzy")
+
+#person2
+imshift(person2,100,100,boundary=2) %>% plot(main="person2 (circular)") #Shift circular
+person2.rect <- imsub(person2, x %inr% c(100,300), y %inr% c(100,300))
+plot(person2.rect, main="person2 rectangular")
+person2.fuzzy <- px.flood(person2, x=1, y=1, sigma=0.3)
+plot(person2.fuzzy, main="person2 fuzzy")
+
+#otherimage1
+imshift(otherimage1,100,100,boundary=2) %>% plot(main="otherimage1 (circular)") #Shift circular
+otherimage1.rect <- imsub(otherimage1, x %inr% c(100,300), y %inr% c(100,300))
+plot(otherimage1.rect, main="otherimage1 rectangular")
+otherimage1.fuzzy <- px.flood(otherimage1, x=1, y=1, sigma=0.3)
+plot(otherimage1.fuzzy, main="otherimage1 fuzzy")
+
+#otherimage2
+imshift(otherimage2,100,100,boundary=2) %>% plot(main="otherimage2 (circular)") #Shift circular
+otherimage2.rect <- imsub(otherimage2, x %inr% c(100,300), y %inr% c(100,300))
+plot(otherimage2.rect, main="otherimage2 rectangular")
+otherimage2.fuzzy <- px.flood(otherimage2, x=1, y=1, sigma=0.3)
+plot(otherimage2.fuzzy, main="otherimage2 fuzzy")
+
