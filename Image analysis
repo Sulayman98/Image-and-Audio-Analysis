@@ -337,3 +337,127 @@ dev.off()
 
 otherimage2.combined = imappend(list(otherimage2.red, otherimage2.green, otherimage2.blue), axis="x")
 plot(otherimage2.combined, main = "Channels Combined")
+
+#Task 3: Image transformation
+# Resizing flower1
+flower1_resized = resize(flower1, -10, -10)  # reduce by 10%
+plot(flower1_resized, main = "flower1 resized")
+
+# Rotating flower1
+flower1_rotated = imrotate(flower1, 30)  # rotate 30 degrees
+plot(flower1_rotated, main = "flower1 rotated")
+
+# Shifting flower1
+flower1_shifted = imshift(flower1, 40, 20)          # shift 40px right, 20px down
+plot(flower1_shifted, main="flower1 shifted")
+
+# Resizing flower2
+flower2_resized = resize(flower2, -10, -10)  # reduce by 10%
+plot(flower2_resized, main = "flower2 resized")
+
+# Rotating flower2
+flower2_rotated = imrotate(flower2, 30)  # rotate 30 degrees
+plot(flower2_rotated, main = "flower2 rotated")
+
+# Shifting flower2
+flower2_shifted = imshift(flower2, 40, 20)          # shift 40px right, 20px down
+plot(flower2_shifted, main="flower2 shifted")
+
+# Resizing scenery1
+scenery1_resized = resize(scenery1, -10, -10)  # reduce by 10%
+plot(scenery1_resized, main = "scenery1 resized")
+
+# Rotating scenery1
+scenery1_rotated = imrotate(scenery1, 30)  # rotate 30 degrees
+plot(scenery1_rotated, main = "scenery1 rotated")
+
+# Shifting scenery1
+scenery1_shifted = imshift(scenery1, 40, 20)          # shift 40px right, 20px down
+plot(scenery1_shifted, main="scenery1 shifted")
+
+# Resizing scenery2
+scenery2_resized = resize(scenery2, -10, -10)  # reduce by 10%
+plot(scenery2_resized, main = "scenery2 resized")
+
+# Rotating scenery2
+scenery2_rotated = imrotate(scenery2, 30)  # rotate 30 degrees
+plot(scenery2_rotated, main = "scenery2 rotated")
+
+# Shifting scenery2
+scenery2_shifted = imshift(scenery2, 40, 20)          # shift 40px right, 20px down
+plot(scenery2_shifted, main="scenery2 shifted")
+
+
+# Resizing building1
+building1_resized = resize(building1, -10, -10)  # reduce by 10%
+plot(building1_resized, main = "building1 resized")
+
+# Rotating building1
+building1_rotated = imrotate(building1, 30)  # rotate 30 degrees
+plot(building1_rotated, main = "building1 rotated")
+
+# Shifting building1
+building1_shifted = imshift(building1, 40, 20)          # shift 40px right, 20px down
+plot(building1_shifted, main="building1 shifted")
+
+# Resizing building2
+building2_resized = resize(building2, -10, -10)  # reduce by 10%
+plot(building2_resized, main = "building2 resized")
+
+# Rotating building2
+building2_rotated = imrotate(building2, 30)  # rotate 30 degrees
+plot(building2_rotated, main = "building2 rotated")
+
+# Shifting building2
+building2_shifted = imshift(building2, 40, 20)          # shift 40px right, 20px down
+plot(building2_shifted, main="building2 shifted")
+
+
+# Resizing person1
+person1_resized = resize(person1, -10, -10)  # reduce by 10%
+plot(person1_resized, main = "person1 resized")
+
+# Rotating person1
+person1_rotated = imrotate(person1, 30)  # rotate 30 degrees
+plot(person1_rotated, main = "person1 rotated")
+
+# Shifting person1
+person1_shifted = imshift(person1, 40, 20)          # shift 40px right, 20px down
+plot(person1_shifted, main="person1 shifted")
+
+# Resizing person2
+person2_resized = resize(person2, -10, -10)  # reduce by 10%
+plot(person2_resized, main = "person2 resized")
+
+# Rotating person2
+person2_rotated = imrotate(person2, 30)  # rotate 30 degrees
+plot(person2_rotated, main = "person2 rotated")
+
+# Shifting person2
+person2_shifted = imshift(person2, 40, 20)          # shift 40px right, 20px down
+plot(person2_shifted, main="person2 shifted")
+
+
+# Resizing otherimage1
+otherimage1_resized = resize(otherimage1, -10, -10)  # reduce by 10%
+plot(otherimage1_resized, main = "otherimage1 resized")
+
+# Rotating otherimage1
+otherimage1_rotated = imrotate(otherimage1, 30)  # rotate 30 degrees
+plot(otherimage1_rotated, main = "otherimage1 rotated")
+
+# Shifting otherimage1
+otherimage1_shifted = imshift(otherimage1, 40, 20)          # shift 40px right, 20px down
+plot(otherimage1_shifted, main="otherimage1 shifted")
+
+# Resizing otherimage2
+otherimage2_resized = resize(otherimage2, -10, -10)  # reduce by 10%
+plot(otherimage2_resized, main = "otherimage2 resized")
+
+# Rotating otherimage2
+otherimage2_rotated = imrotate(otherimage2, 30)  # rotate 30 degrees
+plot(otherimage2_rotated, main = "otherimage2 rotated")
+
+# Shifting otherimage2
+otherimage2_shifted = imshift(otherimage2, 40, 20)          # shift 40px right, 20px down
+plot(otherimage2_shifted, main="otherimage2 shifted")
