@@ -137,129 +137,203 @@ plot(otherimage2.xedge, main = "X-Edge")
 plot(otherimage2.yedge, main = "Y-Edge")
 
 
-# ============ TASK 1: SPLITTING & CONCATENATING ============
+##Task 2: splitting and concatenating images
+#flower1
+# SPLITTING — break into RGB channels
+flower1.red   = R(flower1)
+flower1.green = G(flower1)
+flower1.blue  = B(flower1)
 
-# --- Flower 1 (Colour) ---
-# Splitting into RGB channels
-flower1.red   <- R(flower1)
-flower1.green <- G(flower1)
-flower1.blue  <- B(flower1)
+# Plot the split channels
 layout(t(1:4))
-plot(flower1,       main = "Flower1 Original")
-plot(flower1.red,   main = "Flower1 Red Channel")
-plot(flower1.green, main = "Flower1 Green Channel")
-plot(flower1.blue,  main = "Flower1 Blue Channel")
+plot(flower1,       main = "Original")
+plot(flower1.red,   main = "Red Channel")
+plot(flower1.green, main = "Green Channel")
+plot(flower1.blue,  main = "Blue Channel")
 
-# Concatenating flower1 and flower2 side by side
-flower.combined <- imappend(list(flower1, flower2), axis="x")
-plot(flower.combined, main = "Flower1 & Flower2 Combined")
 
-# --- Flower 2 (Grey) ---
-# Grey images only have one channel so we split by top/bottom
-flower2.top    <- imsub(flower2, y <= height(flower2)/2)
-flower2.bottom <- imsub(flower2, y >  height(flower2)/2)
-layout(t(1:3))
-plot(flower2,        main = "Flower2 Original")
-plot(flower2.top,    main = "Flower2 Top Half")
-plot(flower2.bottom, main = "Flower2 Bottom Half")
+# Plot the concatenated result
+dev.off()
 
-# Concatenating top and bottom back together
-flower2.combined <- imappend(list(flower2.top, flower2.bottom), axis="y")
-plot(flower2.combined, main = "Flower2 Rejoined")
+flower.combined = imappend(list(flower1.red, flower1.green, flower1.blue), axis="x")
+plot(flower.combined, main = "Channels Concatenated")
 
-# --- Scenery 1 (Colour) ---
-scenery1.red   <- R(scenery1)
-scenery1.green <- G(scenery1)
-scenery1.blue  <- B(scenery1)
+#flower2
+# SPLITTING — break into RGB channels
+flower2.red   = R(flower2)
+flower2.green = G(flower2)
+flower2.blue  = B(flower2)
+
+# Plot the split channels
 layout(t(1:4))
-plot(scenery1,       main = "Scenery1 Original")
-plot(scenery1.red,   main = "Scenery1 Red Channel")
-plot(scenery1.green, main = "Scenery1 Green Channel")
-plot(scenery1.blue,  main = "Scenery1 Blue Channel")
+plot(flower2,       main = "Original")
+plot(flower2.red,   main = "Red Channel")
+plot(flower2.green, main = "Green Channel")
+plot(flower2.blue,  main = "Blue Channel")
 
-# Concatenating scenery1 and scenery2 side by side
-scenery.combined <- imappend(list(scenery1, scenery2), axis="x")
-plot(scenery.combined, main = "Scenery1 & Scenery2 Combined")
 
-# --- Scenery 2 (Grey) ---
-scenery2.top    <- imsub(scenery2, y <= height(scenery2)/2)
-scenery2.bottom <- imsub(scenery2, y >  height(scenery2)/2)
-layout(t(1:3))
-plot(scenery2,        main = "Scenery2 Original")
-plot(scenery2.top,    main = "Scenery2 Top Half")
-plot(scenery2.bottom, main = "Scenery2 Bottom Half")
+#Plotting concatenated value
+dev.off()
 
-scenery2.combined <- imappend(list(scenery2.top, scenery2.bottom), axis="y")
-plot(scenery2.combined, main = "Scenery2 Rejoined")
+flower2.combined = imappend(list(flower2.red, flower2.green, flower2.blue), axis="x")
+plot(flower.combined, main = "Channels Combined")
 
-# --- Building 1 (Colour) ---
-building1.red   <- R(building1)
-building1.green <- G(building1)
-building1.blue  <- B(building1)
+#scenery1
+# SPLITTING — break into RGB channels
+scenery1.red   = R(scenery1)
+scenery1.green = G(scenery1)
+scenery1.blue  = B(scenery1)
+
+# Plot the split channels
 layout(t(1:4))
-plot(building1,       main = "Building1 Original")
-plot(building1.red,   main = "Building1 Red Channel")
-plot(building1.green, main = "Building1 Green Channel")
-plot(building1.blue,  main = "Building1 Blue Channel")
+plot(scenery1,       main = "Original")
+plot(scenery1.red,   main = "Red Channel")
+plot(scenery1.green, main = "Green Channel")
+plot(scenery1.blue,  main = "Blue Channel")
 
-building.combined <- imappend(list(building1, building2), axis="x")
-plot(building.combined, main = "Building1 & Building2 Combined")
 
-# --- Building 2 (Grey) ---
-building2.top    <- imsub(building2, y <= height(building2)/2)
-building2.bottom <- imsub(building2, y >  height(building2)/2)
-layout(t(1:3))
-plot(building2,        main = "Building2 Original")
-plot(building2.top,    main = "Building2 Top Half")
-plot(building2.bottom, main = "Building2 Bottom Half")
+# Plot the concatenated result
+dev.off()
 
-building2.combined <- imappend(list(building2.top, building2.bottom), axis="y")
-plot(building2.combined, main = "Building2 Rejoined")
+scenery1.combined = imappend(list(scenery1.red, scenery1.green, scenery1.blue), axis="x")
+plot(scenery1.combined, main = "Channels Concatenated")
 
-# --- Person 1 (Colour) ---
-person1.red   <- R(person1)
-person1.green <- G(person1)
-person1.blue  <- B(person1)
+#scenery2
+# SPLITTING — break into RGB channels
+scenery2.red   = R(scenery2)
+scenery2.green = G(scenery2)
+scenery2.blue  = B(scenery2)
+
+# Plot the split channels
 layout(t(1:4))
-plot(person1,       main = "Person1 Original")
-plot(person1.red,   main = "Person1 Red Channel")
-plot(person1.green, main = "Person1 Green Channel")
-plot(person1.blue,  main = "Person1 Blue Channel")
+plot(scenery2,       main = "Original")
+plot(scenery2.red,   main = "Red Channel")
+plot(scenery2.green, main = "Green Channel")
+plot(scenery2.blue,  main = "Blue Channel")
 
-person.combined <- imappend(list(person1, person2), axis="x")
-plot(person.combined, main = "Person1 & Person2 Combined")
 
-# --- Person 2 (Grey) ---
-person2.top    <- imsub(person2, y <= height(person2)/2)
-person2.bottom <- imsub(person2, y >  height(person2)/2)
-layout(t(1:3))
-plot(person2,        main = "Person2 Original")
-plot(person2.top,    main = "Person2 Top Half")
-plot(person2.bottom, main = "Person2 Bottom Half")
+# Plot the concatenated result
+dev.off()
 
-person2.combined <- imappend(list(person2.top, person2.bottom), axis="y")
-plot(person2.combined, main = "Person2 Rejoined")
+scenery2.combined = imappend(list(scenery2.red, scenery2.green, scenery2.blue), axis="x")
+plot(scenery2.combined, main = "Channels Combined")
 
-# --- Other Image 1 (Colour) ---
-otherimage1.red   <- R(otherimage1)
-otherimage1.green <- G(otherimage1)
-otherimage1.blue  <- B(otherimage1)
+#building1
+# SPLITTING — break into RGB channels
+building1.red   = R(building1)
+building1.green = G(building1)
+building1.blue  = B(building1)
+
+# Plot the split channels
 layout(t(1:4))
-plot(otherimage1,       main = "OtherImage1 Original")
-plot(otherimage1.red,   main = "OtherImage1 Red Channel")
-plot(otherimage1.green, main = "OtherImage1 Green Channel")
-plot(otherimage1.blue,  main = "OtherImage1 Blue Channel")
+plot(building1,       main = "Original")
+plot(building1.red,   main = "Red Channel")
+plot(building1.green, main = "Green Channel")
+plot(building1.blue,  main = "Blue Channel")
 
-other.combined <- imappend(list(otherimage1, otherimage2), axis="x")
-plot(other.combined, main = "OtherImage1 & OtherImage2 Combined")
 
-# --- Other Image 2 (Grey) ---
-otherimage2.top    <- imsub(otherimage2, y <= height(otherimage2)/2)
-otherimage2.bottom <- imsub(otherimage2, y >  height(otherimage2)/2)
-layout(t(1:3))
-plot(otherimage2,        main = "OtherImage2 Original")
-plot(otherimage2.top,    main = "OtherImage2 Top Half")
-plot(otherimage2.bottom, main = "OtherImage2 Bottom Half")
+# Plot the concatenated result
+dev.off()
 
-otherimage2.combined <- imappend(list(otherimage2.top, otherimage2.bottom), axis="y")
-plot(otherimage2.combined, main = "OtherImage2 Rejoined")
+building1.combined = imappend(list(building1.red, building1.green, building1.blue), axis="x")
+plot(building1.combined, main = "Channels Concatenated")
+
+#building2
+# SPLITTING — break into RGB channels
+building2.red   = R(building2)
+building2.green = G(building2)
+building2.blue  = B(building2)
+
+# Plot the split channels
+layout(t(1:4))
+plot(building2,       main = "Original")
+plot(building2.red,   main = "Red Channel")
+plot(building2.green, main = "Green Channel")
+plot(building2.blue,  main = "Blue Channel")
+
+
+# Plot the concatenated result
+dev.off()
+
+building2.combined = imappend(list(building2.red, building2.green, building2.blue), axis="x")
+plot(building2.combined, main = "Channels Combined")
+
+#person1
+# SPLITTING — break into RGB channels
+person1.red   = R(person1)
+person1.green = G(person1)
+person1.blue  = B(person1)
+
+# Plot the split channels
+layout(t(1:4))
+plot(person1,       main = "Original")
+plot(person1.red,   main = "Red Channel")
+plot(person1.green, main = "Green Channel")
+plot(person1.blue,  main = "Blue Channel")
+
+
+# Plot the concatenated result
+dev.off()
+
+person1.combined = imappend(list(person1.red, person1.green, person1.blue), axis="x")
+plot(person1.combined, main = "Channels Combined")
+
+#person2
+# SPLITTING — break into RGB channels
+person2.red   = R(person2)
+person2.green = G(person2)
+person2.blue  = B(person2)
+
+# Plot the split channels
+layout(t(1:4))
+plot(person2,       main = "Original")
+plot(person2.red,   main = "Red Channel")
+plot(person2.green, main = "Green Channel")
+plot(person2.blue,  main = "Blue Channel")
+
+
+# Plot the concatenated result
+dev.off()
+
+person2.combined = imappend(list(person2.red, person2.green, person2.blue), axis="x")
+plot(person2.combined, main = "Channels Combined")
+
+#otherimage1
+# SPLITTING — break into RGB channels
+otherimage1.red   = R(otherimage1)
+otherimage1.green = G(otherimage1)
+otherimage1.blue  = B(otherimage1)
+
+# Plot the split channels
+layout(t(1:4))
+plot(otherimage1,       main = "Original")
+plot(otherimage1.red,   main = "Red Channel")
+plot(otherimage1.green, main = "Green Channel")
+plot(otherimage1.blue,  main = "Blue Channel")
+
+
+# Plot the concatenated result
+dev.off()
+
+otherimage1.combined = imappend(list(otherimage1.red, otherimage1.green, otherimage1.blue), axis="x")
+plot(otherimage1.combined, main = "Channels Combined")
+
+#otherimage2
+# SPLITTING — break into RGB channels
+otherimage2.red   = R(otherimage2)
+otherimage2.green = G(otherimage2)
+otherimage2.blue  = B(otherimage2)
+
+# Plot the split channels
+layout(t(1:4))
+plot(otherimage2,       main = "Original")
+plot(otherimage2.red,   main = "Red Channel")
+plot(otherimage2.green, main = "Green Channel")
+plot(otherimage2.blue,  main = "Blue Channel")
+
+
+# Plot the concatenated result
+dev.off()
+
+otherimage2.combined = imappend(list(otherimage2.red, otherimage2.green, otherimage2.blue), axis="x")
+plot(otherimage2.combined, main = "Channels Combined")
