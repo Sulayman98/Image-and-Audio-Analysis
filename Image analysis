@@ -605,3 +605,101 @@ plot(otherimage2.blur, main = "otherimage2 blur")
 
 otherimage2.sharp = isoblur(otherimage2, 0.1)
 plot(otherimage2.sharp, main = "otherimage2 sharp")
+
+#Task 6 Segmentation using thresholding
+flower1.f = flatten.alpha(flower1)
+flower1.g = grayscale(flower1.f)
+
+layout(t(1:3))
+threshold(flower1.g, "20%") %>% plot(main="flower1 segmented 20%")
+threshold(flower1.g, "15%") %>% plot(main="flower1 segmented 15%")
+threshold(flower1.g, "10%") %>% plot(main="flower1 segmented 10%")
+
+#using flower2
+flower2.f = flatten.alpha(flower2)
+flower2.g = grayscale(flower2.f)
+
+layout(t(1:3))
+threshold(flower2.g, "20%") %>% plot(main="flower2 segmented 20%")
+threshold(flower2.g, "15%") %>% plot(main="flower2 segmented 15%")
+threshold(flower2.g, "10%") %>% plot(main="flower2 segmented 10%")
+
+#Using scenery1
+
+scenery1.f = flatten.alpha(scenery1)
+scenery1.g = grayscale(scenery1.f)
+
+layout(t(1:3))
+threshold(scenery1.g, "20%") %>% plot(main="scenery1 segmented 20%")
+threshold(scenery1.g, "15%") %>% plot(main="scenery1 segmented 15%")
+threshold(scenery1.g, "10%") %>% plot(main="scenery1 segmented 10%")
+
+#Using scenery2 
+
+scenery2.f = flatten.alpha(scenery2)
+scenery2.g = grayscale(scenery2.f)
+
+layout(t(1:3))
+threshold(scenery2.g, "20%") %>% plot(main="scenery2 segmented 20%")
+threshold(scenery2.g, "15%") %>% plot(main="scenery2 segmented 15%")
+threshold(scenery2.g, "10%") %>% plot(main="scenery2 segmented 10%")
+
+#Using building1
+
+building1.f = flatten.alpha(building1)
+building1.g = grayscale(building1.f)
+
+layout(t(1:3))
+threshold(building1.g, "20%") %>% plot(main="building1 segmented 20%")
+threshold(building1.g, "15%") %>% plot(main="building1 segmented 15%")
+threshold(building1.g, "10%") %>% plot(main="building1 segmented 10%")
+
+#Using building2 
+
+building2.f = flatten.alpha(building2)
+building2.g = grayscale(building2.f)
+
+layout(t(1:3))
+threshold(building2.g, "20%") %>% plot(main="building2 segmented 20%")
+threshold(building2.g, "15%") %>% plot(main="building2 segmented 15%")
+threshold(building2.g, "10%") %>% plot(main="building2 segmented 10%")
+
+#Using person1
+
+person1.f = flatten.alpha(person1)
+person1.g = grayscale(person1.f)
+
+layout(t(1:3))
+threshold(person1.g, "20%") %>% plot(main="person1 segmented 20%")
+threshold(person1.g, "15%") %>% plot(main="person1 segmented 15%")
+threshold(person1.g, "10%") %>% plot(main="person1 segmented 10%")
+
+#Using person2 
+
+person2.f = flatten.alpha(person2)
+person2.g = grayscale(person2.f)
+
+layout(t(1:3))
+threshold(person2.g, "20%") %>% plot(main="person2 segmented 20%")
+threshold(person2.g, "15%") %>% plot(main="person2 segmented 15%")
+threshold(person2.g, "10%") %>% plot(main="person2 segmented 10%")
+
+#Using otherimage1
+
+otherimage1.f = flatten.alpha(otherimage1)
+otherimage1.g = grayscale(otherimage1.f)
+
+layout(t(1:3))
+threshold(otherimage1.g, "20%") %>% plot(main="otherimage1 segmented 20%")
+threshold(otherimage1.g, "15%") %>% plot(main="otherimage1 segmented 15%")
+threshold(otherimage1.g, "10%") %>% plot(main="otherimage1 segmented 10%")
+
+#Using otherimage2
+
+otherimage2.f = flatten.alpha(otherimage2)
+otherimage2.g = grayscale(otherimage2.f)
+
+layout(t(1:3))
+threshold(otherimage2.g, "20%") %>% plot(main="otherimage2 segmented 20%")
+threshold(otherimage2.g, "15%") %>% plot(main="otherimage2 segmented 15%")
+threshold(otherimage2.g, "10%") %>% plot(main="otherimage2 segmented 10%")
