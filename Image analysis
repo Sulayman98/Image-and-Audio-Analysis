@@ -535,3 +535,73 @@ plot(otherimage2.rect, main="otherimage2 rectangular")
 otherimage2.fuzzy <- px.flood(otherimage2, x=1, y=1, sigma=0.3)
 plot(otherimage2.fuzzy, main="otherimage2 fuzzy")
 
+#Task5 Blurring and sharpening
+flower1.blurry = isoblur(flower1, 10)
+plot(flower1.blurry, main = "flower1 blurry")
+
+flower1.sharp = isoblur(flower1, 0.1)
+plot(flower1.sharp, main = "flower1 sharp")
+
+#flower2
+flower2.blurry = isoblur(flower2, 10)
+plot(flower2.blurry, main = "flower2 blurry")
+
+flower2.sharp = isoblur(flower2, 0.1)
+plot(flower2.sharp, main = "flower2 sharp")
+
+#scenery1
+scenery1.blur = isoblur(scenery1, 10)
+plot(scenery1.blur, main = "scenery1 blur")
+
+scenery1.sharp = isoblur(scenery1, 0.1)
+plot(scenery1.sharp, main = "scenery1 sharp")
+
+
+#scenery2
+scenery2.blur = isoblur(scenery2, 10)
+plot(scenery2.blur, main = "scenery2 blur")
+
+scenery2.sharp = isoblur(scenery2, 0.1)
+plot(scenery2.sharp, main = "scenery2 sharp")
+
+#building1
+building1.blur = isoblur(building1, 10)
+plot(building1.blur, main = "building1 blur")
+
+building1.sharp = isoblur(building1, 0.1)
+plot(building1.sharp, main = "building1 sharp")
+
+#building2
+building2.blur = isoblur(building2, 10)
+plot(building2.blur, main = "building2 blur")
+
+building2.sharp = isoblur(building2, 0.1)
+plot(building2.sharp, main = "building2 sharp")
+
+#person1
+person1.blur = isoblur(person1, 10)
+plot(person1.blur, main = "person1 blur")
+
+person1.sharp = isoblur(person1, 0.1)
+plot(person1.sharp, main = "person1 sharp")
+
+#person2
+person2.blur = isoblur(person2, 10)
+plot(person2.blur, main = "person2 blur")
+
+person2.sharp = isoblur(person2, 0.1)
+plot(person2.sharp, main = "person2 sharp")
+
+#otherimage1
+otherimage1.blur = isoblur(otherimage1, 10)
+plot(otherimage1.blur, main = "otherimage1 blur")
+
+otherimage1.sharp = isoblur(otherimage1, 0.1)
+plot(otherimage1.sharp, main = "otherimage1 sharp")
+
+#otherimage2
+otherimage2.blur = isoblur(otherimage2, 10)
+plot(otherimage2.blur, main = "otherimage2 blur")
+
+otherimage2.sharp = isoblur(otherimage2, 0.1)
+plot(otherimage2.sharp, main = "otherimage2 sharp")
