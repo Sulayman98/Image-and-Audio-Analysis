@@ -703,3 +703,76 @@ layout(t(1:3))
 threshold(otherimage2.g, "20%") %>% plot(main="otherimage2 segmented 20%")
 threshold(otherimage2.g, "15%") %>% plot(main="otherimage2 segmented 15%")
 threshold(otherimage2.g, "10%") %>% plot(main="otherimage2 segmented 10%")
+
+#Task 7 Histogram equalisation
+#Using flower1
+dev.off()
+flower1_equal = ecdf(flower1.g)
+plot(flower1_equal,main="Empirical CDF of luminance values for flower1")
+flower1_equal(flower1.g) %>% hist(main="Transformed luminance values for flower1")
+flower1_equal(flower1.g) %>% str
+flower1_equal(flower1.g) %>% as.cimg(dim=dim(flower1.g)) %>% plot(main="With histogram equalisation")
+
+#Using flower2
+flower2_equal = ecdf(flower2.g)
+plot(flower2_equal,main="Empirical CDF of luminance values for flower2")
+flower2_equal(flower2.g) %>% hist(main="Transformed luminance values for flower2")
+flower2_equal(flower2.g) %>% str
+flower2_equal(flower2.g) %>% as.cimg(dim=dim(flower2.g)) %>% plot(main="With histogram equalisation")
+
+
+#Using scenery1
+scenery1_equal = ecdf(scenery1.g)
+plot(scenery1_equal,main="Empirical CDF of luminance values for scenery1")
+scenery1_equal(scenery1.g) %>% hist(main="Transformed luminance values for scenery1")
+scenery1_equal(scenery1.g) %>% str
+scenery1_equal(scenery1.g) %>% as.cimg(dim=dim(scenery1.g)) %>% plot(main="With histogram equalisation")
+
+#Using scenery1
+scenery2_equal = ecdf(scenery2.g)
+plot(scenery2_equal,main="Empirical CDF of luminance values for scenery2")
+scenery2_equal(scenery2.g) %>% hist(main="Transformed luminance values for scenery2")
+scenery2_equal(scenery2.g) %>% str
+scenery2_equal(scenery2.g) %>% as.cimg(dim=dim(scenery2.g)) %>% plot(main="With histogram equalisation")
+
+#Using building1
+building1_equal = ecdf(scenery1.g)
+plot(building1_equal,main="Empirical CDF of luminance values for building1")
+building1_equal(building1.g) %>% hist(main="Transformed luminance values for building1")
+building1_equal(building1.g) %>% str
+building1_equal(building1.g) %>% as.cimg(dim=dim(building1.g)) %>% plot(main="With histogram equalisation")
+
+#Using building2
+building2_equal = ecdf(building2.g)
+plot(building2_equal,main="Empirical CDF of luminance values for building2")
+building2_equal(building2.g) %>% hist(main="Transformed luminance values for building2")
+building2_equal(building2.g) %>% str
+building2_equal(building2.g) %>% as.cimg(dim=dim(building2.g)) %>% plot(main="With histogram equalisation")
+
+#Using person1
+person1_equal = ecdf(person1.g)
+plot(person1_equal,main="Empirical CDF of luminance values for person1")
+person1_equal(person1.g) %>% hist(main="Transformed luminance values for person1")
+person1_equal(person1.g) %>% str
+person1_equal(person1.g) %>% as.cimg(dim=dim(person1.g)) %>% plot(main="With histogram equalisation")
+
+#Using person2
+person2_equal = ecdf(person2.g)
+plot(person2_equal,main="Empirical CDF of luminance values for person2")
+person2_equal(person2.g) %>% hist(main="Transformed luminance values for person2")
+person2_equal(person2.g) %>% str
+person2_equal(person2.g) %>% as.cimg(dim=dim(person2.g)) %>% plot(main="With histogram equalisation")
+
+#Using otherimage1
+otherimage1_equal = ecdf(otherimage1.g)
+plot(otherimage1_equal,main="Empirical CDF of luminance values for otherimage1")
+person1_equal(otherimage1.g) %>% hist(main="Transformed luminance values for otherimage1")
+person1_equal(otherimage1.g) %>% str
+person1_equal(otherimage1.g) %>% as.cimg(dim=dim(otherimage1.g)) %>% plot(main="With histogram equalisation")
+
+#Using otherimage2
+otherimage2_equal = ecdf(otherimage2.g)
+plot(otherimage2_equal,main="Empirical CDF of luminance values for otherimage2")
+person2_equal(otherimage2.g) %>% hist(main="Transformed luminance values for otherimage2")
+person2_equal(otherimage2.g) %>% str
+person2_equal(otherimage2.g) %>% as.cimg(dim=dim(otherimage2.g)) %>% plot(main="With histogram equalisation")
