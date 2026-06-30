@@ -776,3 +776,256 @@ plot(otherimage2_equal,main="Empirical CDF of luminance values for otherimage2")
 person2_equal(otherimage2.g) %>% hist(main="Transformed luminance values for otherimage2")
 person2_equal(otherimage2.g) %>% str
 person2_equal(otherimage2.g) %>% as.cimg(dim=dim(otherimage2.g)) %>% plot(main="With histogram equalisation")
+
+
+#Task 8 Morphological operation
+#flower1
+# Erosion - shrinks white regions, removes small noise specks
+flower1.thresh <- threshold(flower1.g, "15%")
+flower1.eroded <- erode_square(flower1.thresh, 3)
+plot(flower1.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+flower1.dilated <- dilate_square(flower1.thresh, 3)
+plot(flower1.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+flower1.opened <- flower1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(flower1.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+flower1.closed <- flower1.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(flower1.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(flower1.thresh,  main = "Original threshold")
+plot(flower1.eroded,  main = "Eroded")
+plot(flower1.dilated, main = "Dilated")
+plot(flower1.opened,  main = "Opened")
+
+#flower2
+# Erosion - shrinks white regions, removes small noise specks
+flower2.thresh <- threshold(flower2.g, "15%")
+flower2.eroded <- erode_square(flower2.thresh, 3)
+plot(flower2.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+flower2.dilated <- dilate_square(flower2.thresh, 3)
+plot(flower2.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+flower2.opened <- flower2.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(flower2.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+flower2.closed <- flower2.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(flower2.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(flower2.thresh,  main = "Original threshold")
+plot(flower2.eroded,  main = "Eroded")
+plot(flower2.dilated, main = "Dilated")
+plot(flower2.opened,  main = "Opened")
+
+#scenery1
+# Erosion - shrinks white regions, removes small noise specks
+scenery1.thresh <- threshold(scenery1.g, "15%")
+scenery1.eroded <- erode_square(scenery1.thresh, 3)
+plot(scenery1.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+scenery1.dilated <- dilate_square(scenery1.thresh, 3)
+plot(scenery1.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+scenery1.opened <- scenery1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(scenery1.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+scenery1.closed <- scenery1.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(scenery1.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(scenery1.thresh,  main = "Original threshold")
+plot(scenery1.eroded,  main = "Eroded")
+plot(scenery1.dilated, main = "Dilated")
+plot(scenery1.opened,  main = "Opened")
+
+#scenery2
+# Erosion - shrinks white regions, removes small noise specks
+scenery2.thresh <- threshold(scenery2.g, "15%")
+scenery2.eroded <- erode_square(scenery2.thresh, 3)
+plot(scenery2.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+scenery2.dilated <- dilate_square(scenery2.thresh, 3)
+plot(scenery2.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+scenery2.opened <- scenery2.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(scenery2.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+scenery2.closed <- scenery2.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(scenery2.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(scenery2.thresh,  main = "Original threshold")
+plot(scenery2.eroded,  main = "Eroded")
+plot(scenery2.dilated, main = "Dilated")
+plot(scenery2.opened,  main = "Opened")
+
+#building1
+# Erosion - shrinks white regions, removes small noise specks
+building1.thresh <- threshold(building1.g, "15%")
+building1.eroded <- erode_square(building1.thresh, 3)
+plot(building1.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+building1.dilated <- dilate_square(building1.thresh, 3)
+plot(building1.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+building1.opened <- building1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(building1.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+building1.closed <- building1.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(building1.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(building1.thresh,  main = "Original threshold")
+plot(building1.eroded,  main = "Eroded")
+plot(building1.dilated, main = "Dilated")
+plot(building1.opened,  main = "Opened")
+
+#building2
+# Erosion - shrinks white regions, removes small noise specks
+building2.thresh <- threshold(building2.g, "15%")
+building2.eroded <- erode_square(building2.thresh, 3)
+plot(building2.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+building2.dilated <- dilate_square(building2.thresh, 3)
+plot(building2.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+building2.opened <- building2.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(building2.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+building2.closed <- building2.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(building2.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(building2.thresh,  main = "Original threshold")
+plot(building2.eroded,  main = "Eroded")
+plot(building2.dilated, main = "Dilated")
+plot(building2.opened,  main = "Opened")
+
+#person1
+# Erosion - shrinks white regions, removes small noise specks
+person1.thresh <- threshold(person1.g, "15%")
+person1.eroded <- erode_square(person1.thresh, 3)
+plot(person1.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+person1.dilated <- dilate_square(person1.thresh, 3)
+plot(person1.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+person1.opened <- person1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(person1.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+person1.closed <- person1.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(person1.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(person1.thresh,  main = "Original threshold")
+plot(person1.eroded,  main = "Eroded")
+plot(person1.dilated, main = "Dilated")
+plot(person1.opened,  main = "Opened")
+
+#person2
+# Erosion - shrinks white regions, removes small noise specks
+person2.thresh <- threshold(person2.g, "15%")
+person2.eroded <- erode_square(person2.thresh, 3)
+plot(person2.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+person2.dilated <- dilate_square(person2.thresh, 3)
+plot(person2.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+person2.opened <- person1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(person2.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+person2.closed <- person2.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(person2.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(person2.thresh,  main = "Original threshold")
+plot(person2.eroded,  main = "Eroded")
+plot(person2.dilated, main = "Dilated")
+plot(person2.opened,  main = "Opened")
+
+
+#otherimage1
+# Erosion - shrinks white regions, removes small noise specks
+otherimage1.thresh <- threshold(otherimage1.g, "15%")
+otherimage1.eroded <- erode_square(otherimage1.thresh, 3)
+plot(otherimage1.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+otherimage1.dilated <- dilate_square(otherimage1.thresh, 3)
+plot(otherimage1.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+otherimage1.opened <- otherimage1.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(otherimage1.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+otherimage1.closed <- otherimage1.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(otherimage1.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(otherimage1.thresh,  main = "Original threshold")
+plot(otherimage1.eroded,  main = "Eroded")
+plot(otherimage1.dilated, main = "Dilated")
+plot(otherimage1.opened,  main = "Opened")
+
+#otherimage2
+# Erosion - shrinks white regions, removes small noise specks
+otherimage2.thresh <- threshold(otherimage2.g, "15%")
+otherimage2.eroded <- erode_square(otherimage2.thresh, 3)
+plot(otherimage2.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+otherimage2.dilated <- dilate_square(otherimage2.thresh, 3)
+plot(otherimage2.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+otherimage2.opened <- otherimage2.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(otherimage2.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+otherimage2.closed <- otherimage2.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(otherimage2.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(otherimage2.thresh,  main = "Original threshold")
+plot(otherimage2.eroded,  main = "Eroded")
+plot(otherimage2.dilated, main = "Dilated")
+plot(otherimage2.opened,  main = "Opened")
