@@ -1,0 +1,45 @@
+library(tuneR)
+library(seewave)
+
+a = readMP3(file.choose()) #Loading just the bird call
+b = readWave(file.choose()) #Loading the bird call and song
+
+#Testing the output
+play(a)
+play(b)
+
+#Plotting oscillogram 
+plot(a, main="Waveform: Call")
+plot(b, main="Waveform: Call+Song")
+
+dev.off()
+plot.frequency.spectrum <- function(X.k, xlimits=c(0,length(X.k))) {
+  plot.data <- cbind(0:(length(X.k)-1), Mod(X.k))
+  plot.data[2:length(X.k),2] <- 2*plot.data[2:length(X.k),2]
+  plot(plot.data, t="h", lwd=2, main="",
+       xlab="Frequency (Hz)", ylab="Strength",
+       xlim=xlimits, ylim=c(0,max(Mod(plot.data[,2]))))
+}
+
+ak <- fft(a@left)
+plot.frequency.spectrum(ak)
+plot.frequency.spectrum(ak[1:20000])
+spectro(a) #give spectrogram
+dev.off()
+meanspec(a) 
+
+
+bk <- fft(b@left)
+plot.frequency.spectrum(bk)
+plot.frequency.spectrum(bk[1:20000])
+spectro(b) #give spectrogram
+dev.off()
+meanspec(b) 
+
+#Optional
+#Dominant frequency
+dfreq(a, f=a@samp.rate)
+dfreq(b, f=b@samp.rate)
+
+oscillo(a, title="Oscillogram: Call")
+oscillo(b, title="Oscillogram: Song and Call")
