@@ -1125,3 +1125,137 @@ layout(t(1:3))
 plot(albert,main="Original")
 isoblur(albert,5) %>% plot(main="Denoised")
 plot(albert.sharp, main ="Sharpened")
+
+#Question 3 Morphological operations
+
+#Picture 1 color
+#Segmentation
+quokka.f = flatten.alpha(quokka)
+quokka.g = grayscale(quokka.f)
+
+layout(t(1:3))
+threshold(quokka.g, "20%") %>% plot(main="quokka segmented 20%")
+threshold(quokka.g, "15%") %>% plot(main="quokka segmented 15%")
+threshold(quokka.g, "10%") %>% plot(main="quokka segmented 10%")
+# Erosion - shrinks white regions, removes small noise specks
+quokka.thresh <- threshold(quokka.g, "15%")
+quokka.eroded <- erode_square(quokka.thresh, 3)
+plot(quokka.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+quokka.dilated <- dilate_square(quokka.thresh, 3)
+plot(quokka.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+quokka.opened <- quokka.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(quokka.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+quokka.closed <- quokka.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(quokka.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(quokka.thresh,  main = "Original threshold")
+plot(quokka.eroded,  main = "Eroded")
+plot(quokka.dilated, main = "Dilated")
+plot(quokka.opened,  main = "Opened")
+
+#Picture 2 grey
+#Segmentation
+dog.f = flatten.alpha(dog)
+dog.g = grayscale(dog.f)
+
+layout(t(1:3))
+threshold(dog.g, "20%") %>% plot(main="dog segmented 20%")
+threshold(dog.g, "15%") %>% plot(main="dog segmented 15%")
+threshold(dog.g, "10%") %>% plot(main="dog segmented 10%")
+# Erosion - shrinks white regions, removes small noise specks
+dog.thresh <- threshold(dog.g, "15%")
+dog.eroded <- erode_square(dog.thresh, 3)
+plot(dog.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+dog.dilated <- dilate_square(dog.thresh, 3)
+plot(dog.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+dog.opened <- dog.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(dog.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+dog.closed <- dog.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(dog.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(dog.thresh,  main = "Original threshold")
+plot(dog.eroded,  main = "Eroded")
+plot(dog.dilated, main = "Dilated")
+plot(dog.opened,  main = "Opened")
+
+#Picture 3 color
+#Segmentation
+grapes.f = flatten.alpha(grapes)
+grapes.g = grayscale(grapes.f)
+
+layout(t(1:3))
+threshold(grapes.g, "20%") %>% plot(main="grapes segmented 20%")
+threshold(grapes.g, "15%") %>% plot(main="grapes segmented 15%")
+threshold(grapes.g, "10%") %>% plot(main="grapes segmented 10%")
+# Erosion - shrinks white regions, removes small noise specks
+grapes.thresh <- threshold(grapes.g, "15%")
+grapes.eroded <- erode_square(grapes.thresh, 3)
+plot(grapes.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+grapes.dilated <- dilate_square(grapes.thresh, 3)
+plot(grapes.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+grapes.opened <- grapes.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(grapes.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+grapes.closed <- grapes.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(grapes.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(grapes.thresh,  main = "Original threshold")
+plot(grapes.eroded,  main = "Eroded")
+plot(grapes.dilated, main = "Dilated")
+plot(grapes.opened,  main = "Opened")
+
+#Picture 4 grey
+#Segmentation
+albert.f = flatten.alpha(albert)
+albert.g = grayscale(albert.f)
+
+layout(t(1:3))
+threshold(albert.g, "20%") %>% plot(main="albert segmented 20%")
+threshold(albert.g, "15%") %>% plot(main="albert segmented 15%")
+threshold(albert.g, "10%") %>% plot(main="albert segmented 10%")
+# Erosion - shrinks white regions, removes small noise specks
+albert.thresh <- threshold(albert.g, "15%")
+albert.eroded <- erode_square(albert.thresh, 3)
+plot(albert.eroded, main = "Eroded")
+
+# Dilation - expands white regions, fills small holes/gaps
+albert.dilated <- dilate_square(albert.thresh, 3)
+plot(albert.dilated, main = "Dilated")
+
+# Opening (erosion then dilation) - removes small noise while preserving overall shape
+albert.opened <- albert.thresh %>% erode_square(3) %>% dilate_square(3)
+plot(albert.opened, main = "Opened")
+
+# Closing (dilation then erosion) - fills small holes while preserving overall shape
+albert.closed <- albert.thresh %>% dilate_square(3) %>% erode_square(3)
+plot(albert.closed, main = "Closed")
+
+# Compare all results side by side
+layout(t(1:4))
+plot(albert.thresh,  main = "Original threshold")
+plot(albert.eroded,  main = "Eroded")
+plot(albert.dilated, main = "Dilated")
+plot(albert.opened,  main = "Opened")
